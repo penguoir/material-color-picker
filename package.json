@@ -1,0 +1,29 @@
+{
+  "name": "mateiral-color-picker",
+  "version": "1.0.0",
+  "description": "A web app tbat makes it easy to choose the best color for you.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penguoir/material-color-picker.git"
+  },
+  "keywords": [
+    "material",
+    "design",
+    "color",
+    "picker",
+    "css"
+  ],
+  "author": "Ori Marash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/penguoir/material-color-picker/issues"
+  },
+  "homepage": "https://github.com/penguoir/material-color-picker#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.12",
+    "browsersync": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

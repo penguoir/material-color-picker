@@ -1,0 +1,15 @@
+.back-button {
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	z-index: 100;
+
+	display: none;
+
+	cursor: pointer; 
+	cursor: hand;
+
+	i {
+		color: #999;
+	}
+}
