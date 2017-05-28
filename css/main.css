@@ -795,3 +795,79 @@
   cursor: hand; }
   .back-button i {
     color: #999; }
+
+.menu-area {
+  position: absolute;
+  height: 30em;
+  width: 7em;
+  right: 1em;
+  bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.color-format {
+  height: 3.2em;
+  width: 3.2em;
+  border-radius: 50%;
+  position: relative;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.3em;
+  background-color: #fff;
+  color: #333;
+  border: 0.5px solid #eee;
+  cursor: pointer;
+  cursor: hand;
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease; }
+  .color-format.active {
+    background-color: #29b6f6;
+    color: #fff;
+    border: 0px solid white; }
+  .color-format:hover {
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3); }
+  .color-format .content {
+    font-size: 1.3em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100; }
+
+.menu {
+  padding: 1em;
+  border-radius: 50%;
+  background-color: #03a9f4;
+  margin: 1em;
+  cursor: pointer;
+  cursor: hand;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease; }
+  .menu:hover {
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3); }
+  .menu i {
+    margin-top: 1px;
+    margin-left: 1px;
+    color: #fff;
+    font-size: 31px; }

@@ -9,7 +9,7 @@ var shades = [
 
 var colorState = true;
 var currentColor = null;
-var copyState = 'hexnohash';
+var copyState = 'hex';
 
 // 'Not optimised for mobile' message when on mobile
 function checkMobile() {
@@ -93,6 +93,10 @@ function showColors () {
 }
 
 $(document).ready(function () {
+	if ( Cookies.get('format') ) {
+		copyState = Cookies.get('format');
+	}
+
 	// Turns boxs into primary colors
 	$('.cbox').each(function (index) {
 		$(this).addClass(colors[index] + '-500');
@@ -104,11 +108,46 @@ $(document).ready(function () {
 		index = $(this).attr('data-index');
 		colorState ? showShades( index ) : copy( index );
 		$('.cbox-container').rippleria('changeColor', $(this).css('background-color'))
+		$('.cbox-container').rippleria("changeDuration", "400");
 	})
 
 	// Go to primary colors when clicking on back button
 	$('.back-button').click(function() {
 		showColors();
 	})
+
+	// Goes to original colors when clicking on backspace key
+	document.addEventListener("keydown", function(event) {
+		if (event.keyCode == 8) showColors();
+	});
+
+	$('.menu').click(function() {
+		if($('.color-format').css('display') == 'flex') {
+			$('.color-format').hide('fast').css('display', 'none');
+		}
+		else {
+			$('.color-format').show('fast').css('display', 'flex');
+		}
+	})
+
+	// Closes menu when clicking outside of the menu
+	$("body").click(function(){
+	  $('.color-format').hide('fast').css('display', 'none');
+	});
+
+	$(".menu-area").click(function(e){
+	  e.stopPropagation();
+	});
+
+	// Swap the color copy format 
+	$('.color-format').click(function() {
+		$('.active').removeClass('active');
+		$(this).addClass('active');
+		copyState = $(this).text();
+		Cookies.set('format', copyState, {expires: 1000000000});
+	})
+
+	// Adds active class to current copy state (changes because of cookies)
+	$('.' + copyState).addClass('active');
 
 });

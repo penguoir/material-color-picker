@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Material Color Picker</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons|Raleway">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
@@ -38,12 +38,20 @@
 	<div class="back-button">
 	<i class="material-icons">arrow_back</i>
 	</div>
+
+	<div class="menu-area">
+		<div class="color-format hsl"><span class="content">hsl</span></div>
+		<div class="color-format hex"><span class="content">hex</span></div>
+		<div class="color-format rgb"><span class="content">rgb</span></div>
+		<div class="menu" data-rippleria>
+			<i class="material-icons">menu</i>
+		</div>
 	</div>
 <!-- TODO: localise -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.1/tinycolor.min.js"></script>
-<script type="text/javascript" src="js/snackbar.js"></script>
+<script type="text/javascript" src="js/cookie.js"></script>
 <script type="text/javascript" src="js/ripple.js"></script>
 <script type="text/javascript" src="js/picker.js"></script>
 </body>
