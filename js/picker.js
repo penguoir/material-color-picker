@@ -28,7 +28,9 @@ function getBackgroundColor(trigger) {
 	var bg = tinycolor( $(trigger).css('background-color') );
 	switch (copyState) {
 		case 'hex':
-			return bg.toHexString();
+			// No # in default hex
+			// TODO: add menu option for "with hash"
+			return bg.toHex();
 			break;
 		case 'hexnohash':
 			return bg.toHex();
